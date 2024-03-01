@@ -2,6 +2,7 @@ import { Router } from "express";
 
 import authRouter from "./auth";
 import testRouter from "./test";
+
 import { PATH } from "../config";
 import { useAuthentication } from "../middlewares";
 
@@ -17,6 +18,6 @@ router.use(PATH.AUTH.BASE, authRouter);
 
 router.use(useAuthentication);
 /** 测试路由 */
-router.use(PATH.TEST, testRouter);
+router.use(PATH.TEST.BASE, testRouter);
 
 export default router;

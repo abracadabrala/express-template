@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 /** 测试路由 */
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
   console.log("test");
   res.send("hello");
 });

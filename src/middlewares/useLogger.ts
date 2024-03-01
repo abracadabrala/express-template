@@ -9,8 +9,7 @@ export function useLogger(req: Request, res: Response, next: NextFunction) {
 
   // 记录请求开始的信息
   log.info(
-    `[${requestId}] \nRequest started - ${req.method} ${req.url} from ${
-      req.ip
+    `[${requestId}] \nRequest started - ${req.method} ${req.url} from ${req.ip
     } \nRequest Headers: ${JSON.stringify(
       req.headers
     )} \nRequest Body: ${JSON.stringify(req.body)}`
@@ -21,11 +20,8 @@ export function useLogger(req: Request, res: Response, next: NextFunction) {
 
     // 记录响应信息
     log.info(
-      `[${requestId}] \nRequest completed - ${req.method} ${req.url} - ${
-        res.statusCode
-      } (${responseTime} ms) \nResponse Headers: ${JSON.stringify(
-        res.getHeaders()
-      )}`
+      `[${requestId}] \nRequest completed - ${req.method} ${req.url} - ${res.statusCode
+      } (${responseTime} ms)`
     );
   });
 

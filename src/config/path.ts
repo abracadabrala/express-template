@@ -5,7 +5,9 @@ export const PATH = {
   /** 根路径 */
   BASE: "/api",
   /**测试路由 */
-  TEST: "/test",
+  TEST: {
+    BASE: "/test",
+  },
   /** 权限路由 */
   AUTH: {
     BASE: "/auth",

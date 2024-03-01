@@ -12,5 +12,5 @@ process.on("unhandledRejection", (reason) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`server listen on port ${PORT}\nenv ${process.env.NODE_ENV}`);
+  log.info(`server listen on port ${PORT}\nenv ${process.env.NODE_ENV}`);
 });
