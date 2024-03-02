@@ -1,0 +1,16 @@
+{
+  "name": "resend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js",
+    "reload": "pm2 reload resend",
+    "stop": "pm2 stop resend",
+    "logs": "pm2 logs resend",
+    "del": "pm2 delete resend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
