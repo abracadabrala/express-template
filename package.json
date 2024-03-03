@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc && esbuild dist/index.js --minify --bundle --outdir=build --platform=node && pnpm compress",
     "compress": "tar -Jvcf app.tar.xz build",
-    "dev:win": "set NODE_ENV=development && nodemon build/index.js",
-    "dev": "NODE_ENV=production nodemon build/index.js"
+    "dev:win": "set NODE_ENV=development && nodemon dist/index.js",
+    "dev": "NODE_ENV=production nodemon dist/index.js"
   },
   "author": "leonard",
   "license": "ISC",
@@ -23,12 +23,12 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "ajv": "^8.12.0",
     "axios": "^1.6.7",
     "cors": "^2.8.5",
     "dayjs": "^1.11.10",
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
-    "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "knex": "^3.1.0",
