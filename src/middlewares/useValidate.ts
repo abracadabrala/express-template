@@ -10,7 +10,7 @@ export function validate<T>(schema: JSONSchemaType<T>) {
     const data = req.body;
     const valid = ajv.validate(schema, data);
     if (!valid) {
-      const errors = ajv.errors;
+      // const errors = ajv.errors;
       // res.send(createErrorMsg({ error: "Validation failed", details: errors }));
       res.send(createErrorMsg("参数错误"))
     } else {

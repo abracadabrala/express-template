@@ -12,6 +12,7 @@ loadKeys()
 
 const app = express();
 
+app.use(limiter)
 app.use(express.json());
 
 if (process.env.NODE_ENV === ENV.pro) {
@@ -19,7 +20,6 @@ if (process.env.NODE_ENV === ENV.pro) {
   app.use(cors());
 }
 
-// app.use(limiter)
 app.use(useLogger);
 
 app.use(PATH.BASE + PATH.VERSION, router);
