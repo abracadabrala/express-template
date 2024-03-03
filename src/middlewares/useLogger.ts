@@ -8,10 +8,11 @@ export function useLogger(req: Request, res: Response, next: NextFunction) {
   res.locals.requestStartTime = Date.now();
 
   // 记录请求开始的信息
+  const {authorization, ...income} = req.headers
   log.info(
     `[${requestId}] \nRequest started - ${req.method} ${req.url} from ${req.ip
     } \nRequest Headers: ${JSON.stringify(
-      req.headers
+      income
     )} \nRequest Body: ${JSON.stringify(req.body)}`
   );
 
