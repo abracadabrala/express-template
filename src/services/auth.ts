@@ -1,8 +1,6 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { v4 as uuidv4 } from "uuid";
-import { log } from "../utils/logger";
-import { createErrorMsg, createMsg } from "../utils/message";
 
 /** 登录服务 */
 export async function logIn(req: Request, res: Response) {
